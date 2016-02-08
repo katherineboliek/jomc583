@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--angular-->
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <!--script file-->
+  <script type="text/javascript" src="js/app.js"></script>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="css/bootstrap.min.css"></script>
+  <!--css-->
+  <link rel="stylesheet" href="css/styles.css"></script>
+</head>
+<body ng-app="app">
+  <div class="container" ng-controller="playersController as play">
+    {{play.message}}
+    <players-list></players-list>
+  </div>
+</body>
+</html>

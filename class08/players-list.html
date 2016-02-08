@@ -1,0 +1,24 @@
+<input type="text" ng-model="terms" class="form-control" style="float: right" placeholder="Search" />
+<table>
+  <thead>
+    <tr>
+      <th class="name" ng-click=play.setSort('name')>Name</th>
+      <th>Position</th>
+      <th>Points</th>
+      <th>Assists</th>
+      <th>Blocks</th>
+      <th>Fouls</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="player in play.players | orderBy:'play.sort':false | filter: terms">
+      <td class="name">{{player.first}} {{player.last}}</td>
+      <td>{{player.position}}</td>
+      <td>{{player.points}}</td>
+      <td>{{player.assists}}</td>
+      <td>{{player.blocks}}</td>
+      <td>{{player.fouls}}</td>
+      <td class="thumb"><img src="{{player.images[0]}}" height=150px /></td>
+    </tr>
+  </tbody>
