@@ -12,6 +12,7 @@
       <th></th>
     </tr>
   </thead>
+  
   <tbody>
     <tr ng-repeat="player in play.players | orderBy:play.sort:play.direction | filter: terms">
       <td>{{player.first}}</td>

@@ -22,6 +22,7 @@ app.directive('playersList', function(){
 });
 
 var data = [
+
     {
         first: "Brice",
         last: "Johnson",
@@ -463,4 +464,5 @@ var data = [
         fouls: 1,
         points: 0
     }
+    
 ];
