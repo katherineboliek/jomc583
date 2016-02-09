@@ -7,10 +7,8 @@ app.controller('playersController', function(){
   this.direction = false;
 
   this.setSort = function(columnName){
-    if(this.sort=== columnName){
-      this.direction = !this.direction
-    }
     this.sort = columnName;
+    this.direction = !this.direction;
   };
 });
 

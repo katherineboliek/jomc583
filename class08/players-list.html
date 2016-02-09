@@ -1,19 +1,21 @@
 <input type="text" ng-model="terms" class="form-control" style="float: right" placeholder="Search" />
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th class="name" ng-click=play.setSort('name')>Name</th>
-      <th>Position</th>
-      <th>Points</th>
-      <th>Assists</th>
-      <th>Blocks</th>
-      <th>Fouls</th>
+      <th ng-click="play.setSort('first')">First</th>
+      <th ng-click="play.setSort('last')">Last</th>
+      <th ng-click="play.setSort('position')">Position</th>
+      <th ng-click="play.setSort('points')">Points</th>
+      <th ng-click="play.setSort('assists')">Assists</th>
+      <th ng-click="play.setSort('blocks')">Blocks</th>
+      <th ng-click="play.setSort('fouls')">Fouls</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="player in play.players | orderBy:'play.sort':false | filter: terms">
-      <td class="name">{{player.first}} {{player.last}}</td>
+    <tr ng-repeat="player in play.players | orderBy:play.sort:play.direction | filter: terms">
+      <td>{{player.first}}</td>
+      <td>{{player.last}}</td>
       <td>{{player.position}}</td>
       <td>{{player.points}}</td>
       <td>{{player.assists}}</td>
